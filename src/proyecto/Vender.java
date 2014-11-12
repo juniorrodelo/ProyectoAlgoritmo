@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.IOException;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
@@ -161,19 +162,37 @@ public class Vender extends Cliente {
 
     public void pagar() {
 
-        String pago;
-        int consig = 0;
-
-        pago = JOptionPane.showInputDialog(null, "Cuanto desea Pagar? ");
-        if ((pago != null) && !pago.equals("") && validador.isNum(pago)) {
-            consig = Integer.parseInt(pago);
-            if (consig > 0) {
-                saldo -= consig;
-            } else {
-                JOptionPane.showMessageDialog(null, "Consigne una cantidad mayor a 0 !!!");
+        ncedula = JOptionPane.showInputDialog(null, " Digite El número de cédula Del Cliente");
+        int pago; String pagar_saldo;
+        File z = new File("Archivos/clientes/" + ncedula + ".txt");
+        if (z.exists()) {
+            pagar_saldo = JOptionPane.showInputDialog(null, " Ingrese el Valor que desea Cancelar $$");
+            pago = Integer.parseInt(pagar_saldo);
+            try {
+            File file = new File("Archivos/clientes/" + ncedula + ".txt");
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            String line = "", oldtext = "";
+            while ((line = reader.readLine()) != null) {
+                if (line.indexOf("Saldo") != -1) {
+                    String[] clientes = line.split("=");
+                    sald = clientes[1];
+                    saldo = Integer.parseInt(sald)-pago;
+                }
+                oldtext += line + "\r\n";
             }
+            reader.close();
+
+            String newtext = oldtext.replaceAll("Saldo =" + sald, "Saldo =" + saldo);
+
+            FileWriter writer = new FileWriter("Archivos/clientes/" + ncedula + ".txt");
+            writer.write(newtext);
+            writer.close();
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+         
         } else {
-            JOptionPane.showMessageDialog(null, "Ingrese un valor a consignar!!!");
+            JOptionPane.showMessageDialog(null, " Este Número de Cédula No Está Registrado");
         }
     }
 

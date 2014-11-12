@@ -18,15 +18,19 @@ public class Menu_principal {
                         menu_vender();
                         break;
                     case 2:
+                        Vender pagar = new Vender();
+                        pagar.pagar();
+                        break;
+                    case 3:
                         Cliente ec = new Cliente();
                         ec.buscar_cliente();
                         break;
-                    case 3:
+                    case 4:
                         Cliente ic = new Cliente();
                         ic.agregar_cliente();
                         break;
-                    case 4:
-                        
+                    case 5:
+                        otras_operaciones();
                         break;
                 }
             } else {
@@ -72,8 +76,8 @@ public class Menu_principal {
                         vpc.venta_por_codigo();
                         break;
                     case 2:
-                        Vender vm = new Vender();
-                        vm.venta_manual();
+                        Cliente bc = new Cliente();
+                        bc.Borrar_cliente();
                         break;
                 }
             } else {

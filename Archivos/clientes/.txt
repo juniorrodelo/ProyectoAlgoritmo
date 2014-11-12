@@ -1,0 +1,6 @@
+ |  |  |  |  / 
+*********************** ESTADO DEL CLIENTE ******************** /
+Saldo =0
+*********************** ESTADO DEL CLIENTE (Fin) ******************** /
+*********************** COMPRAS QUE HA COMPRADO EL CLIENTE ******************** /
+*********************** COMPRAS QUE HA COMPRADO EL CLIENTE ******************** /
