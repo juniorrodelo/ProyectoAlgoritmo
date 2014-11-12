@@ -1,4 +1,4 @@
-package pruebas;
+package proyecto;
 
 import javax.swing.JOptionPane;
 
@@ -12,7 +12,7 @@ public class procesos {
         String ax;
         int op = 0;
         do {
-            ax = JOptionPane.showInputDialog(null, "1. Saldo \n 2. Consignar \n 3. Retirar \n 4. Cambiar Clave \n 5. Salir");
+            ax = JOptionPane.showInputDialog(null, "1. Vender \n 2.  \n 3. Retirar \n 4. Cambiar Clave \n 5. Salir");
             if (ax != null && validador.isNum(ax)) {
                 op = Integer.parseInt(ax);
                 switch (op) {
@@ -35,15 +35,7 @@ public class procesos {
         } while (op != 5);    
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
+     
     
     public void verSal() {
         JOptionPane.showMessageDialog(null, "Tu saldo a la fecha es: " + saldo);

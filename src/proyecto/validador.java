@@ -1,5 +1,5 @@
 
-package pruebas;
+package proyecto;
 
 public class validador {
     public static boolean isNum(String a){//metodo para validar si es un numero        

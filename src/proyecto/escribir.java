@@ -1,5 +1,5 @@
 
-package pruebas;
+package proyecto;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -22,7 +22,7 @@ public class escribir {
     }
     
     public void leer(){
-        String texto = "";
+         String texto = "";
 
         try {
             FileReader lector = new FileReader("texto.txt");

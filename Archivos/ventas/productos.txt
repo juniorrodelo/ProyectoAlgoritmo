@@ -1,0 +1,6 @@
+Papa negra -1200-0001 /
+Papa Limpia -1700-0002 /
+Cebolla roja -1500- 0003 /
+Cebolla Blanca -1900- 0004 /
+Maraculla -2400 - 0005 /
+Tomate Rojo -1900 - 0006 /

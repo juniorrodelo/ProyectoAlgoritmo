@@ -1,0 +1,15 @@
+97052317227 | Alfredo Enrique | Rodelo Coronado | 3124600156 | Buenos Aires / 
+*********************** ESTADO DEL CLIENTE ******************** /
+Saldo =7000
+*********************** ESTADO DEL CLIENTE (Fin) ******************** /
+*********************** COMPRAS QUE HA COMPRADO EL CLIENTE ******************** /
+
+
+
+
+Producto: papa criollaPrecio:1200
+Producto: Aji picantePrecio:3400
+Producto: Colgate Triple AcciónPrecio:2400
+
+El total de la Venta Fué: 7000
+
